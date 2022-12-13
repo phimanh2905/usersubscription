@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { UserSubscriptionComponent } from './user-subscription.component';
 
 const routes: Routes = [
   {
-    path: 'usersubscription',
-    loadChildren: () =>
-      import('./user-subscription/user-subscription.module').then((m) => m.UserSubscriptionModule)
+    path: '',
+    component: UserSubscriptionComponent
   },
 
   {
@@ -16,7 +16,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class UserSubscriptionRoutingModule {}
